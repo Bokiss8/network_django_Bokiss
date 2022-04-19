@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block script %}
-    <script src="{% static 'network/inbox24.js' %}" type="module"></script>
+    <script src="{% static 'network/inbox25.js' %}" type="module"></script>
 {% endblock %}
 
 {% block body %}
@@ -14,7 +14,7 @@
       <div id="compose-post">
         <form id="post-form">
           {% csrf_token %}
-          <textarea class="form-control" id="compose-body" placeholder="New Post...->" maxlength="140"></textarea>
+          <textarea class="form-control" id="compose-body" placeholder="New Post...->"></textarea>
           <input type="hidden" id="user-id" name="userid" value="{{ user.id }}" form="post-form">
           <input type="hidden" id="user-name" name="username" value="{{ user.username|capfirst }}" form="post-form">
           <input type="button" class="circle" value=">>"/>
@@ -24,10 +24,10 @@
       <!--========================================================================================-->
       <div class="posts">
         <strong>"CHAIN"</strong> - is an Ukrainian microblogging and social networking service on which users post and
-         interact with messages like "tweets".  Registered users can post, like tweets. Users interact with CHAIN through browser 
-         or mobile frontend software. The service is provided by 
+         interact with messages like "tweets".  Registered users can post, like tweets. Users interact with CHAIN through browser
+         or mobile frontend software. The service is provided by
            CHAIN, INC, a corporation based in San Kirovogrado, Ukraine, and has more than 25 offices around the world. Tweets
-            were originally restricted to 140 characters. 
+            were originally restricted to 140 characters.
             <br>
             <br>
             <h6>You want to known more ? </h6>
@@ -37,7 +37,7 @@
 
       {% if user.is_authenticated %}
       <div id="nav_page">
-        
+
         <nav aria-label="...">
           <ul class="pagination">
             <li class="page-item disabled" id="previous">
@@ -53,7 +53,7 @@
             </li>
           </ul>
         </nav>
-     
+
       </div>
       {% endif %}
 
@@ -61,7 +61,7 @@
 <!--========================================================================================-->
     </div>
 
-   
+
 
     {% if user.is_authenticated %}
 <!--========================================================================================-->
@@ -71,7 +71,7 @@
         <div class="info_1">
         <div class="info_name" id="info_name_id">name</div>
         <div class="info_subscribe">subscribe</div>
-        <div class="info_unsubscribe">unsubscribe</div> 
+        <div class="info_unsubscribe">unsubscribe</div>
         </div>
 
         <div class="info_2">
@@ -97,14 +97,14 @@
 <!--========================================================================================-->
     {% endif %}
 
-   
 
-    
+
+
 
   </div>
 <!--========================================================================================-->
   <div class="edit_textarea">
-    <textarea class="correct_textarea" maxlength="140"></textarea>
+    <textarea class="correct_textarea"></textarea>
   </div>
 <!--========================================================================================-->
 {% endblock %}

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User, Post, UserPostLikeStatus, CommentsInPost, FollowingAndFollowers
 
-# Register your models here.|bokiss:dszn3568|longlonglongname:dszn3568|
+# Register your models here.|
 class PostAdmin(admin.ModelAdmin):
     list_display = ("id", "post_user_name", "post_text", "post_date", "post_like")
 class FollowingAndFollowersAdmin(admin.ModelAdmin):
